@@ -2,6 +2,7 @@ package frequency
 
 import (
 	"sort"
+	"strings"
 )
 
 type Entry struct {
@@ -23,7 +24,7 @@ func (f FrequencyObj) Complete(base string) []string {
 	//Extract valid entries from map
 	entries := []Entry{}
 	for key := range f.dict {
-		if key == base {
+		if strings.HasPrefix(key, base) {
 			entry := Entry{word: key, frequency: f.dict[key]}
 			entries = append(entries, entry)
 		}

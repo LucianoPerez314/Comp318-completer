@@ -19,7 +19,7 @@ func (b BaseObj) Complete(base string) []string {
 	//Extract valid keys from map
 	var words = []string{}
 	for word := range b.dict {
-		if word == base {
+		if strings.HasPrefix(word, base) {
 			words = append(words, word)
 		}
 	}
