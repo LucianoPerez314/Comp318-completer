@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/comp318/tutorials/base"      // fix to properly reference your package
-	"github.com/comp318/tutorials/frequency" // fix to properly reference your package
+	"github.com/LucianoPerez314/Comp318-completer/base"      // fix to properly reference your package
+	"github.com/LucianoPerez314/Comp318-completer/frequency" // fix to properly reference your package
 )
 
 type Completer interface {
